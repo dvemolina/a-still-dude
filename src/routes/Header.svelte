@@ -10,7 +10,7 @@
 		{
             tag: 'TikTok: @astilldude',
 			svg: 'svg/tiktok.svg',
-			link: 'https://tiktok.com/astilldude'
+			link: 'https://tiktok.com/@astilldude'
         }
 	];
 </script>
