@@ -1,10 +1,10 @@
 import type { Post } from "$src/lib/types"
-import { json } from '@sveltejs/kit'
+import { json, type RequestHandler } from '@sveltejs/kit'
 
 
 export const GET: RequestHandler = async () => {
     const posts = await getAllPosts()
-    return (json(posts));
+    return json(posts);
 };
 
 async function getAllPosts() {
@@ -19,7 +19,7 @@ async function getAllPosts() {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>
 			const post = { ...metadata, slug } satisfies Post
-			post.published && posts.push(post)
+			if(post.published) posts.push(post)
 		}
 	}
 
