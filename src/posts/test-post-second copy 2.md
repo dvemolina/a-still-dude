@@ -1,7 +1,7 @@
 ---
 title: "The Field: How Everything and Everyone is Connected"
 description: Second test Post trying to embed some media aand explaining the basics and natures about the vastv interconnected field that we live in
-date: 2023-4-16
+date: 2023-12-9
 categories: ["science"]
 published: true
 ---

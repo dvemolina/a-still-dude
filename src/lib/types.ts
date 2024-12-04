@@ -1,4 +1,4 @@
-export type Categories = 'science' | 'art' 
+export type Categories = 'science' | 'test'
 
 export type Post = {
     title: string,

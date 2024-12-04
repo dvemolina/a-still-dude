@@ -10,12 +10,15 @@
 	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import Header from './Header.svelte';
-	let { children } = $props();
+	import PageTransition from './PageTransition.svelte';
+	let { children, data } = $props();
 </script>
 
 <ModeWatcher/>
 <ParaglideJS {i18n}>
 	<Header/>
-	{@render children()}
+	<PageTransition url={data.url}>
+		{@render children()}
+	</PageTransition>
 </ParaglideJS>
 

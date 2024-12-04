@@ -67,6 +67,9 @@ export default {
 					dark: '#090909',
 				  }
 			},
+			gridTemplateColumns: {
+				'responsive-cards': 'repeat(auto-fit, minmax(375px, 450px))'
+			},
 			// Typography configuration
 			typography: (theme) => ({
 				// Default prose styles
