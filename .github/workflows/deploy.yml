@@ -22,7 +22,7 @@ jobs:
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: pnpm ci
+        run: npx ci
 
       # Step 4: Build the project
       - name: Build the project
