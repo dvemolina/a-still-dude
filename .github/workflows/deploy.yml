@@ -21,9 +21,12 @@ jobs:
           node-version: 20.12.2 # Use the Node.js version your project requires
           cache: 'pnpm'
 
-      # Step 3: Install pnpm globally
+      # Step 3: Install pnpm
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: |
+          npm install -g pnpm
+          export PATH="$(npm bin -g):$PATH" # Ensure pnpm is in PATH
+          pnpm --version # Verify pnpm installation
 
       # Step 4: Install dependencies
       - name: Install dependencies
