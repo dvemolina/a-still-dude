@@ -3,7 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main # Replace with the branch you want to deploy from
+      - main # Replace with your desired branch for deployment
 
 jobs:
   deploy:
@@ -18,17 +18,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.12.2 # Match your SvelteKit project's Node.js version
+          node-version: 20.12.2 # Use the Node.js version your project requires
+          cache: 'pnpm'
 
-      # Step 3: Install dependencies
+      # Step 3: Install pnpm globally
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # Step 4: Install dependencies
       - name: Install dependencies
-        run: npx ci
+        run: pnpm install
 
-      # Step 4: Build the project
+      # Step 5: Build the project
       - name: Build the project
         run: pnpm run build
 
-      # Step 5: Deploy to Hostinger
+      # Step 6: Deploy to Hostinger via SSH
       - name: Deploy to Hostinger via SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
