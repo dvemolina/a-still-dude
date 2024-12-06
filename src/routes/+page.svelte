@@ -8,10 +8,9 @@
 <section>
 	<div class="mt-48 flex w-full flex-col items-center justify-center text-center mb-36">
 		<h1 class="w-full font-headings text-7xl font-semibold">
-			Science-backed stillness <br />to keep us going places
+			Free science-backed knowledge<br> we weren't taught at school
 		</h1>
 		<h2 class="mt-5 font-subheadings text-3xl text-neutral-500">
-			Open-access knowledge we weren't taught at school
 		</h2>
 	</div>
 </section>

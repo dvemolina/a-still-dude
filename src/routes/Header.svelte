@@ -55,7 +55,7 @@
 <style>
 	 .glass {
 		background: rgba(45, 3, 61, 0.086);
-		box-shadow: 0 3px 20px 0 rgba(85, 31, 135, 0.114);
+		box-shadow: 0 3px 20px 0 rgba(85, 31, 135, 0.075);
 		backdrop-filter: blur(16px);
 		-webkit-backdrop-filter: blur(16px);
 		border: 1px solid rgba(255, 255, 255, 0.012);
