@@ -52,7 +52,7 @@ jobs:
           ssh-keyscan $HOST >> ~/.ssh/known_hosts
           
           # Debug SSH connection attempt
-          ssh -v -o StrictHostKeyChecking=no $USER@$HOST 'echo "SSH connection is working"'
+          ssh -vvv -o StrictHostKeyChecking=no $USER@$HOST 'echo "SSH connection is working"'
           
           # Sync build folder to Hostinger's public_html/astillfella
           rsync -avz --delete ./build/ "$USER@$HOST:~/public_html/astillfella/"
