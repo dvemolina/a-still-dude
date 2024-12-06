@@ -2,5 +2,44 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer base {
 
+	:root {
+		--background: rgba(0 0 0);
+		--text: rgba(255 255 255);
+		--text-neutral: rgba(102, 102, 102);
+		--border: rgba(216, 201, 166, 0.258);
+		--border-active: rgba(204 178 138);
+		--card: rgba(0, 0, 0, 0.31);
+		--cta-bg: transparent;
+		--cta-active: rgba(179 121 81);
+		--cta-text: rgba(255 255 255);
+		--cta-text-active: rgba(255 255 255);
+	}
+}
 
+.dark {
+	--background: rgba(0 0 0);
+	--text: rgba(255 255 255);
+	--text-neutral: rgba(102, 102, 102);
+	--border: rgba(216, 201, 166, 0.258);
+	--border-active: rgba(204 178 138);
+	--card: rgba(0, 0, 0, 0.31);
+	--cta-bg: transparent;
+	--cta-active: rgba(179 121 81);
+	--cta-text: rgba(255 255 255);
+	--cta-text-active: rgba(255 255 255);
+}
+
+.light {
+	--background: rgba(142, 57, 1, 0.342);
+	--text: rgb(0, 0, 0);
+	--text-neutral: rgb(102, 102, 102);
+	--border: rgb(206, 154, 119);
+	--border-active: rgba(230, 185, 155, 0.999);
+	--card: rgba(244, 240, 245, 0.348);
+	--cta: rgb(195, 139, 101);
+	--cta-active: rgb(255, 255, 255);
+	--cta-text: rgb(255, 255, 255);
+	--cta-text-active: rgb(0, 0, 0);
+}

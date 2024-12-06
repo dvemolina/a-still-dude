@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ModeSwitcher from '$src/components/ModeSwitcher.svelte';
-
+	import { onMount } from 'svelte';
+	
 	const social = [
 		{
 			tag: 'IG: @astillfella',
@@ -13,12 +14,25 @@
 			link: 'https://tiktok.com/@astillfella'
 		}
 	];
+
+	let isScrolled = $state(false);
+
+	onMount(() => {
+		const handleScroll = () => {
+			isScrolled = window.scrollY > 0;
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <div class="flex w-full flex-row justify-center">
-	<div
-		class="m-6 flex w-fit flex-row items-center justify-between gap-10 rounded-full p-2 shadow-md"
-	>
+	<div 
+		class="{isScrolled ? "glass" : ""} fixed m-6 flex w-fit flex-row items-center justify-between gap-10 rounded-lg px-3 py-2"
+		>
 		<a href="/" aria-label="Home - A Still Fella">
 			<img src="svg/stilmen.svg" alt="A Still Fella" class="size-14 rounded-full shadow-md" />
 		</a>
@@ -37,3 +51,14 @@
 		<ModeSwitcher />
 	</div>
 </div>
+
+<style>
+	 .glass {
+		background: rgba(45, 3, 61, 0.086);
+		box-shadow: 0 3px 20px 0 rgba(85, 31, 135, 0.114);
+		backdrop-filter: blur(16px);
+		-webkit-backdrop-filter: blur(16px);
+		border: 1px solid rgba(255, 255, 255, 0.012);
+		z-index: 10;
+	}
+</style>

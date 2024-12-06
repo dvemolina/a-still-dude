@@ -1,7 +1,11 @@
 <script lang="ts">
-	import { toggleMode, mode } from 'mode-watcher';
+	import { toggleMode, mode, setMode } from 'mode-watcher';
 	import { fly } from 'svelte/transition';
 
+
+	$effect( () => {
+		console.log("Applied mode: ", $mode)
+	})
 </script>
 
 <button aria-label="Mode Switcher" onclick={toggleMode} class="flex flex-row justify-center items-center p-1 cursor-pointer opacity-65 hover:opacity-90 transition-all">
