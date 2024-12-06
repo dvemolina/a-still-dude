@@ -4,7 +4,6 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 export default {
 	darkMode: "selector",
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	plugins: [],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -26,8 +25,12 @@ export default {
 				ctaTextActive: "var(--cta-text-active)"
 			},
 			gridTemplateColumns: {
-			'responsive-cards': 'repeat(auto-fit, minmax(375px, 450px))'
+				'responsive-cards': 'repeat(auto-fit, minmax(375px, 450px))'
 			}
 		}
-	}
+	},
+	plugins: [
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
+		require('@tailwindcss/typography')
+	],
 } satisfies Config;

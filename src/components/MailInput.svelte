@@ -7,8 +7,8 @@
 		type="email"
 		name="email"
 		id="email"
-		class=" w-3/4 rounded-s-lg p-4 text-center text-xl text-text font-medium"
-		placeholder="Stay Updated! - I hate spam, only Quality Content"
+		class=" w-3/4 rounded-s-lg p-4 text-center text-xl text-text font-medium opacity-75"
+		placeholder="Stay Updated! - I hate spam, only quality"
 	/>
 	<button
 		type="submit"
