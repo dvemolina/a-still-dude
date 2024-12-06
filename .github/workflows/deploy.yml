@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # Match your SvelteKit project's Node.js version
+          node-version: 20.12.2 # Match your SvelteKit project's Node.js version
 
       # Step 3: Install dependencies
       - name: Install dependencies
