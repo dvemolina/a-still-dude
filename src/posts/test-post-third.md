@@ -1,8 +1,8 @@
 ---
-title: "Observation is the key to control your life"
+title: 'Observation is the key to control your life'
 description: Third test Post trying to embed some media and that we live in
 date: 2023-4-18
-categories: ["science"]
+categories: ['science']
 published: true
 ---
 
@@ -10,4 +10,4 @@ published: true
 
 Media inside the **static** folder is served from `/`.
 
-![Dvemolina Art-tag](headTest.JPG)
+![Dvemolina Art-tag](/headTest.JPG)

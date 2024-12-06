@@ -1,6 +1,6 @@
 import type { Post } from "$src/lib/types"
 import { json, type RequestHandler } from '@sveltejs/kit'
-
+export const prerender = true;
 
 export const GET: RequestHandler = async () => {
     const posts = await getAllPosts()

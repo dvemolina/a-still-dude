@@ -10,4 +10,4 @@ published: true
 
 Media inside the **static** folder is served from `/`.
 
-![Dvemolina Art-tag](headTest.JPG)
+![Dvemolina Art-tag](/headTest.JPG)
