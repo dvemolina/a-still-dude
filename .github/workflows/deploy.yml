@@ -39,9 +39,20 @@ jobs:
           HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
           USER: ${{ secrets.HOSTINGER_SSH_USER }}
         run: |
+          # Setup SSH
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          
+          # Print environment variables for debugging
+          echo "Using host: $HOST"
+          echo "Using user: $USER"
+          
+          # Add host to known_hosts and test connection
           ssh-keyscan $HOST >> ~/.ssh/known_hosts
-          ssh -o StrictHostKeyChecking=no $USER@$HOST 'echo "SSH connection is working"'
+          
+          # Debug SSH connection attempt
+          ssh -v -o StrictHostKeyChecking=no $USER@$HOST 'echo "SSH connection is working"'
+          
+          # Sync build folder to Hostinger's public_html/astillfella
           rsync -avz --delete ./build/ "$USER@$HOST:~/public_html/astillfella/"
