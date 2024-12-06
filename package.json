@@ -1,6 +1,7 @@
 {
 	"name": "dvemolina",
 	"version": "0.0.1",
+	"packageManager": "pnpm@9.14.4",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",

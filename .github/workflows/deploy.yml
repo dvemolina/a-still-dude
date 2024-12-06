@@ -3,7 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main # Replace with your desired branch for deployment
+      - main # Replace with the branch you want to deploy from
 
 jobs:
   deploy:
@@ -12,31 +12,27 @@ jobs:
     steps:
       # Step 1: Checkout code
       - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Step 2: Install Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.12.2 # Use the Node.js version your project requires
-          cache: 'pnpm'
-
-      # Step 3: Install pnpm
+        uses: actions/checkout@v4
+      
+      # Step 2: Instal pnpm
       - name: Install pnpm
-        run: |
-          npm install -g pnpm
-          export PATH="$(npm bin -g):$PATH" # Ensure pnpm is in PATH
-          pnpm --version # Verify pnpm installation
+        uses: pnpm/action-setup@v4
 
-      # Step 4: Install dependencies
+      # Step 3: Install Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.12.2 # Match your SvelteKit project's Node.js version
+
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # Step 5: Build the project
+      # Step 4: Build the project
       - name: Build the project
         run: pnpm run build
 
-      # Step 6: Deploy to Hostinger via SSH
+      # Step 5: Deploy to Hostinger
       - name: Deploy to Hostinger via SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
