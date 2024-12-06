@@ -5,6 +5,7 @@
 @layer base {
 
 	:root {
+		--primary: rgba(195, 139, 101);
 		--background: rgba(0 0 0);
 		--text: rgba(255 255 255);
 		--text-neutral: rgba(102, 102, 102);
@@ -19,6 +20,7 @@
 }
 
 .dark {
+	--primary: rgba(195, 139, 101);
 	--background: rgba(0 0 0);
 	--text: rgba(255 255 255);
 	--text-neutral: rgba(102, 102, 102);
@@ -32,6 +34,7 @@
 }
 
 .light {
+	--primary: rgba(195, 139, 101);
 	--background: rgba(142, 57, 1, 0.342);
 	--text: rgb(0, 0, 0);
 	--text-neutral: rgb(102, 102, 102);

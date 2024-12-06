@@ -1,5 +1,6 @@
 <script lang="ts">
-	import PostCard from '$src/components/PostCard.svelte';
+	import MailInput from '$src/components/MailInput.svelte';
+import PostCard from '$src/components/PostCard.svelte';
 
 	let { data } = $props();
 	const posts = data.posts;
@@ -10,8 +11,9 @@
 		<h1 class="w-full font-headings text-7xl font-semibold">
 			Free science-backed knowledge<br> we weren't taught at school
 		</h1>
-		<h2 class="mt-5 font-subheadings text-3xl text-neutral-500">
-		</h2>
+		<div class="w-1/2 mt-8">
+			<MailInput />
+		</div>
 	</div>
 </section>
 

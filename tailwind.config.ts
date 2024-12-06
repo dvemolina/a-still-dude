@@ -13,6 +13,7 @@ export default {
 				body: ['Noto Sans', ...fontFamily.sans],
 			},
 			colors: {
+				primary: "var(--primary)",
 				background: "var(--background)",
 				text: "var(--text)",
 				textNeutral: "var(--text-neutral)",
