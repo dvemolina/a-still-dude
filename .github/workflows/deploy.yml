@@ -32,7 +32,7 @@ jobs:
       - name: Build the project
         run: pnpm run build
 
-      # Step 5: Deploy to Hostinger
+      #  Step 5: Deploy to Hostinger via SSH
       - name: Deploy to Hostinger via SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
@@ -43,4 +43,5 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan $HOST >> ~/.ssh/known_hosts
+          ssh -o StrictHostKeyChecking=no $USER@$HOST 'echo "SSH connection is working"'
           rsync -avz --delete ./build/ "$USER@$HOST:~/public_html/astillfella/"
