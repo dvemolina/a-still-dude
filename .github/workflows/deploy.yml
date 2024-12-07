@@ -32,27 +32,16 @@ jobs:
       - name: Build the project
         run: pnpm run build
 
-      #  Step 5: Deploy to Hostinger via SSH
-      - name: Deploy to Hostinger via SSH
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
-          HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
-          USER: ${{ secrets.HOSTINGER_SSH_USER }}
-        run: |
-          # Setup SSH
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+      #  Step 5: Deploy to Hostinger via SFTP
+      - name: Deploy to Hostinger via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with: 
+          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          port: ${{ secrets.FTP_PORT }}
+          local_path: './build/*'
+          remote_path: '/home/u360458176/domains/ogideas.com/public_html/astillfella'
+          password: ${{ secrets.FTP_PASSWORD }}
+
           
-          # Print environment variables for debugging
-          echo "Using host: $HOST"
-          echo "Using user: $USER"
-          
-          # Add host to known_hosts and test connection
-          ssh-keyscan $HOST >> ~/.ssh/known_hosts
-          
-          # Debug SSH connection attempt
-          ssh -vvv -o StrictHostKeyChecking=no $USER@$HOST 'echo "SSH connection is working"'
-          
-          # Sync build folder to Hostinger's public_html/astillfella
-          rsync -avz --delete ./build/ "$USER@$HOST:~/public_html/astillfella/"
+
