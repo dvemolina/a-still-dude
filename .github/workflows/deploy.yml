@@ -44,7 +44,7 @@ jobs:
           remote-port: ${{ secrets.FTP_PORT }}
           remote-password: ${{ secrets.FTP_PASSWORD }}
           ssh-private-key: ${{ secrets.HOSTINGER_SSH_KEY }}
-          remote-path: "/home/u360458176/domains/ogideas.com/public_html/astillfella/"
+          remote-path: "/astillfella/"
           local-path: "./build/"
           sync: "full"
 
