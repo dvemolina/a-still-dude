@@ -13,6 +13,8 @@ jobs:
       # Step 1: Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       
       # Step 2: Instal pnpm
       - name: Install pnpm
@@ -34,14 +36,17 @@ jobs:
 
       #  Step 5: Deploy to Hostinger via SFTP
       - name: Deploy to Hostinger via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with: 
-          username: ${{ secrets.FTP_USERNAME }}
-          server: ${{ secrets.FTP_SERVER }}
-          port: ${{ secrets.FTP_PORT }}
-          local_path: './build/*'
-          remote_path: '/home/u360458176/domains/ogideas.com/public_html/astillfella'
-          password: ${{ secrets.FTP_PASSWORD }}
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: "sftp"
+          remote-host: ${{ secrets.FTP_SERVER }}
+          remote-user: ${{ secrets.FTP_USERNAME }}
+          remote-port: ${{ secrets.FTP_PORT }}
+          remote-password: ${{ secrets.FTP_PASSWORD }}
+          ssh-private-key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          remote-path: "/home/u360458176/domains/ogideas.com/public_html/astillfella"
+          local-path: "./build/*"
+          sync: "full"
 
           
 
