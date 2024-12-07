@@ -18,7 +18,7 @@
 <div class="wrapper">
 	<div class="gradient">
 		<div class="grain">
-			<div class="content">
+			<div class="content px-4">
 				<ModeWatcher lightClassNames={['light']} defaultMode="dark" />
 				<ParaglideJS {i18n}>
 					<Header />
