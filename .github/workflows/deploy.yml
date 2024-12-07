@@ -46,7 +46,7 @@ jobs:
           ssh-private-key: ${{ secrets.HOSTINGER_SSH_KEY }}
           remote-path: "/astillfella/"
           local-path: "./build/"
-          sync: "full"
+          sync: "delta"
 
           
 
