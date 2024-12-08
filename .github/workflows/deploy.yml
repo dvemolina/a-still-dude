@@ -45,7 +45,7 @@ jobs:
           remote-password: ${{ secrets.FTP_PASSWORD }}
           ssh-private-key: ${{ secrets.HOSTINGER_SSH_KEY }}
           remote-path: "/astillfella"
-          local-path: "./build"
+          local-path: "/build"
           sync: delta
 
           
