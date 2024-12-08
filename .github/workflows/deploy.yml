@@ -44,8 +44,8 @@ jobs:
           remote-port: ${{ secrets.FTP_PORT }}
           remote-password: ${{ secrets.FTP_PASSWORD }}
           ssh-private-key: ${{ secrets.HOSTINGER_SSH_KEY }}
-          remote-path: "/astillfella"
-          local-path: "/build"
+          remote-path: /astillfella
+          local-path: ./build
           sync: full
 
           
