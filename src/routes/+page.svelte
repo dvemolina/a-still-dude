@@ -9,7 +9,7 @@ import PostCard from '$src/components/PostCard.svelte';
 <section>
 	<div class="mt-48 flex w-full flex-col items-center justify-center text-center mb-36">
 		<h1 class="w-full font-headings text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">
-			Two Test Free science-backed knowledge<br> we weren't taught at school
+			Free science-backed knowledge<br> we weren't taught at school
 		</h1>
 		<div class="w-1/2 mt-8">
 			<MailInput />
