@@ -25,7 +25,7 @@ export default {
 				ctaTextActive: "var(--cta-text-active)"
 			},
 			gridTemplateColumns: {
-				'responsive-cards': 'repeat(auto-fit, minmax(375px, 450px))'
+				'responsive-cards': 'repeat(auto-fit, minmax(335px, 400px))'
 			}
 		}
 	},

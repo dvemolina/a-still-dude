@@ -8,10 +8,8 @@
     <meta property="og:title" content={data.meta.title}/>
 </svelte:head>
 
-<div class="flex flex-col w-full h-screen mt-40 justify-center items-center">
-
-
-    <article class=" prose xl:prose-xl lg:prose-lg dark:prose-invert w-full h-full">
+<div class="flex flex-col w-full h-full mt-40 justify-center items-center">
+    <article class=" prose xl:prose-lg lg:prose-lg dark:prose-invert w-full h-full">
         <hgroup>
             <h1>{data.meta.title}</h1>
             <p></p>

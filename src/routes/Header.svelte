@@ -34,7 +34,7 @@
 		class="{isScrolled ? "glass" : ""} fixed m-6 flex w-fit flex-row items-center justify-between gap-10 rounded-lg px-3 py-2"
 		>
 		<a href="/" aria-label="Home - A Still Fella">
-			<img src="/svg/stilmen.svg" alt="A Still Fella" class="size-14 rounded-full shadow-md" />
+			<img src="/svg/stilmen.svg" alt="A Still Fella" class="size-12 rounded-full shadow-md" />
 		</a>
 		Search...
 		<div class="flex flex-row items-center justify-center gap-2">
@@ -52,13 +52,4 @@
 	</div>
 </div>
 
-<style>
-	 .glass {
-		background: rgba(45, 3, 61, 0.086);
-		box-shadow: 0 3px 20px 0 rgba(85, 31, 135, 0.075);
-		backdrop-filter: blur(16px);
-		-webkit-backdrop-filter: blur(16px);
-		border: 1px solid rgba(255, 255, 255, 0.012);
-		z-index: 10;
-	}
-</style>
+

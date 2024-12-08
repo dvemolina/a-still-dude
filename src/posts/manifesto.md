@@ -1,6 +1,6 @@
 ---
-title: "First Steps: Manifesto"
-description: "What is 'A Still Fella', what motivates it, who is it for and where to start your first steps in the site"
+title: "Welcome to A Still Fella: Manifesto & Firsts Steps"
+description: "What is this A Still Fella thing? What motivates this? Who is it for? Where should I start?"
 date: 2024-12-8
 categories: []
 published: true 
