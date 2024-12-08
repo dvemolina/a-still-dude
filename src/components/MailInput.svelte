@@ -7,7 +7,7 @@
 		type="email"
 		name="email"
 		id="email"
-		class=" w-3/4 rounded-s-lg p-4 text-center text-lg text-text font-medium opacity-75"
+		class=" lg:w-3/4 w-full rounded-s-lg p-4 text-center text-lg text-text font-medium opacity-75"
 		placeholder="Stay Updated! (No worries, I hate Spam too)"
 	/>
 	<button

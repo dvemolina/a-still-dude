@@ -34,7 +34,7 @@
 		class="{isScrolled ? "glass" : ""} fixed m-6 flex w-fit flex-row items-center justify-between gap-10 rounded-lg px-3 py-2"
 		>
 		<a href="/" aria-label="Home - A Still Fella">
-			<img src="/svg/stilmen.svg" alt="A Still Fella" class="size-12 rounded-full shadow-md" />
+			<img src="/svg/stilmen.svg" alt="A Still Fella" class="size-12 rounded-full" />
 		</a>
 		Search...
 		<div class="flex flex-row items-center justify-center gap-2">
